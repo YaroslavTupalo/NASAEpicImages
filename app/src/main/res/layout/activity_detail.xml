@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+    
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/detail_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/AppTheme.ToolbarStyle"/>
+
+    </android.support.design.widget.AppBarLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:id="@+id/layoutImageDetail">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/ic_launcher_background" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/dateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateTV"
+            android:text="@string/centroid_coordinates"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:id="@+id/centroid_coordinates"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/centroid_coordinatesLat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dateTV"
+            android:layout_toEndOf="@+id/centroid_coordinates"
+            android:paddingStart="3dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/centroid_coordinatesLon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/centroid_coordinatesLat"
+            android:layout_toEndOf="@id/centroid_coordinates"
+            android:paddingStart="3dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/centroid_coordinatesLon"
+            android:id="@+id/attitude_quaternions"
+            android:text="@string/attitude_quaternions"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/attitude_quaternionsQ0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/centroid_coordinatesLon"
+            android:layout_toEndOf="@+id/attitude_quaternions"
+            android:paddingStart="3dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/attitude_quaternionsQ1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attitude_quaternionsQ0"
+            android:layout_toEndOf="@+id/attitude_quaternions"
+            android:paddingStart="3dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/attitude_quaternionsQ2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attitude_quaternionsQ1"
+            android:layout_toEndOf="@+id/attitude_quaternions"
+            android:paddingStart="3dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/attitude_quaternionsQ3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attitude_quaternionsQ2"
+            android:layout_toEndOf="@+id/attitude_quaternions"
+            android:paddingStart="3dp" />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lunar_position"
+            android:id="@+id/lunar_position"
+            android:layout_below="@+id/attitude_quaternionsQ3"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lunar_positionX"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attitude_quaternionsQ3"
+            android:layout_toEndOf="@+id/lunar_position"
+            android:paddingStart="3dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lunar_positionY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lunar_positionX"
+            android:layout_toEndOf="@+id/lunar_position"
+            android:paddingStart="3dp" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/lunar_positionZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lunar_positionY"
+            android:layout_toEndOf="@+id/lunar_position"
+            android:paddingStart="3dp" />
+        <WebView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lunar_positionZ"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/webView"/>
+    </RelativeLayout>
+    
+    <com.yaroslavtupalo.nasaepicimages.mvp.common.ErrorView
+        android:id="@+id/errorView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:id="@+id/progress"
+        android:visibility="gone"/>
+
+</android.support.design.widget.CoordinatorLayout>

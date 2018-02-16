@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">NASAEpicImages</string>
+
+    <string name="dialog_action_ok">OK</string>
+    <string name="dialog_error_title">Sorry</string>
+
+    <!-- Error View -->
+    <string name="error_title">Oops</string>
+    <string name="error_message">There was a problem loading the NASA Epic Images, please try again!</string>
+    <string name="error_reload">Reload</string>
+    <string name="title_activity_maps_sample">Map</string>
+
+    <string name="captions">Captions</string>
+    <string name="image">Image</string>
+    <string name="date">Date</string>
+    <string name="centroid_coordinates">Centroid Coordinates:</string>
+    <string name="attitude_quaternions">Attitude Quaternions:</string>
+    <string name="lunar_position">Lunar Position:</string>
+</resources>
